@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ScoreTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Scripts/MenuButton.cs" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 640.0
+margin_bottom = 400.0
+color = Color( 0.141176, 0.152941, 0.164706, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+margin_right = 640.0
+margin_bottom = 400.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="Control"]
+margin_left = 240.0
+margin_top = 192.0
+margin_right = 400.0
+margin_bottom = 225.0
+text = "Play"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="Control"]
+margin_left = 240.0
+margin_top = 256.0
+margin_right = 400.0
+margin_bottom = 289.0
+text = "Exit"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+margin_left = 264.0
+margin_top = 120.0
+margin_right = 376.0
+margin_bottom = 147.0
+text = "PONG"
+align = 1
+valign = 1
