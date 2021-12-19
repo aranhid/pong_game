@@ -5,7 +5,7 @@ public class Paddle : Area2D
 {
 	private const int MoveSpeed = 100;
 
-	private int _ballDir;
+	private const int _ballDir = 1;
 	private string _up;
 	private string _down;
 
@@ -14,7 +14,6 @@ public class Paddle : Area2D
 		string name = Name.ToLower();
 		_up = name + "_move_up";
 		_down = name + "_move_down";
-		_ballDir = name == "left" ? 1 : -1;
 	}
 
 	public override void _Process(float delta)

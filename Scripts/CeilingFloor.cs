@@ -9,7 +9,7 @@ public class CeilingFloor : Area2D
 	{
 		if (area is Ball ball)
 		{
-			ball.direction = (ball.direction + new Vector2(0, _bounceDirection)).Normalized();
+			ball.direction = new Vector2(ball.direction.x, -ball.direction.y).Normalized();
 		}
 	}
 }

@@ -17,9 +17,9 @@ public class Bot : Area2D
 	{
 		Vector2 position = Position;
         int dir = 0;
-        int diff = (int) (main_ball.Position.y - position.y);
+        float diff = main_ball.Position.y - position.y;
         if (diff != 0)
-            dir = diff/(int)Math.Abs(diff);
+            dir = (int) (diff/Math.Abs(diff));
 		position += new Vector2(0, dir * MoveSpeed * delta);
 		position.y = Mathf.Clamp(position.y, 16, GetViewportRect().Size.y - 16);
 		Position = position;
@@ -29,7 +29,6 @@ public class Bot : Area2D
 	{
 		if (area is Ball ball)
 		{
-			// Assign new direction
 			ball.direction = new Vector2(_ballDir, ((float)new Random().NextDouble()) * 2 - 1).Normalized();
 			AudioStreamPlayer2D sound = (AudioStreamPlayer2D) ball.GetNode("AudioStreamPlayer2D");
 			sound.Play();
